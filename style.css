@@ -1,0 +1,261 @@
+body{
+    font-family: 'Oswald', sans-serif;
+}
+
+.wrapper{
+    max-width: 1040px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.header{
+    display: flex;
+    justify-content: space-between;
+    height: 100px;
+    line-height: 100px;
+    /* text-align:center;    */
+}
+
+.pc-nav{
+    display: flex;
+}
+
+.pc-nav__item{
+    background-color: #333;
+    color: #fff;
+    border-radius: 10px;
+    margin-left: 8px;
+    padding: 8px 16px;
+    border: #333 solid 2px;
+}
+
+.pc-nav__item:hover{
+    background-color: #fff;
+    color: #333;
+}
+
+.sp-menu{
+    display: none;
+}
+
+
+.top{
+    height: calc(100vh - 100px);
+    background-color: #fff;
+    position: relative;
+    overflow: hidden;
+}
+
+.top__hello{
+    font-size: 4.5rem;
+    position: absolute;
+    bottom: 100px;
+    /* left: 200px; */
+    left: 18%;
+    color: #ccc;
+}
+
+.top__sayaka{
+    font-size: 2rem;
+    position: absolute;
+    left: calc(50% + 1rem);
+    bottom: 350px;
+    color: #333;
+}
+
+.top__designer{
+    font-size: 6rem;
+    position: absolute;
+    left: 50%;
+    /* left: 500px; */
+    bottom: 50px;
+    color: #333;
+    text-align: center;
+    line-height:0.9em;
+    animation: SlideIn 1.5s both;
+    animation-delay:2s
+}
+
+@keyframes SlideIn {
+    0% {
+      opacity: 0;/*初期状態では透明に*/
+      transform: translateX(1000px);
+    }
+    100% {
+          transform: translateX(0);
+    }
+    40%,100% {
+        opacity: 1;
+    }
+  }
+
+.secTitle{
+    margin: 120px auto;
+}
+
+.titleName{
+    background-color: #FBC500;
+    width: 350px;
+    height: 70px;
+    line-height:70px;
+    border: solid 3px #333;
+    border-radius: 10px;
+    font-size: 2rem;
+    text-align: center;
+    margin: 0 auto;
+    z-index: 20;
+    position: absolute;
+    top: 0;
+}
+
+.titleBg{
+    font-size: 1.5rem;
+    letter-spacing: 0.2em;
+    white-space: nowrap;
+    overflow: hidden;
+    transform: rotate(-5deg);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    z-index: 10;
+    background-color: #333;
+    color: #fff;
+}
+
+.bg {
+    background-image: url(profile-bg.png); 
+    position: relative;
+    background-repeat: no-repeat;
+    height: auto;
+    background-position:center ;
+    max-width: 100%;
+    margin: 0 auto;
+  }
+
+.bgDark{
+    background-color: rgba(51, 51, 51, 0.6);
+    width: 100%;
+}
+
+.aboutName{
+    /* position: absolute; */
+    font-size: 2rem;
+    top: 80px;
+    left: 400px;
+    color: #fff;
+    -webkit-text-stroke:2px #333;
+    z-index: 10;
+}
+
+.aboutNameBg{
+    position: absolute;
+    left: 0;
+    top: 100px;
+    width: 80%;
+    height: 30px;
+    background-color: #333;
+    z-index: 5;
+
+}
+
+.aboutContents{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 80px;
+    position: relative;
+}
+
+.nameLeft{
+    width: 50%;
+    top: 80px;
+    position: absolute;
+}
+
+.nameRight{
+    width: 40%;
+    top: 180px;
+    position: absolute;
+}
+
+.nameRight img{
+    width: 180px;
+    height: auto;
+}
+
+@media screen and (max-width: 767px) {
+
+    .wrapper{
+        max-width: 767px;
+    }
+
+    .pc-nav{
+        display: none;
+    }
+
+    .sp-menu{
+        display: block;
+    } 
+
+    .header{
+        position: relative;
+    }
+
+    .header__companyName{
+        display: none;
+    }
+
+    .sp-menu--open{
+    font-size: 0.8rem;
+    background-color: #333;
+    color: #fff;
+    border-radius: 20px;
+    padding: 0 16px;
+    border: #333 solid 2px;
+    }
+
+    .sp-menu--open:hover{
+        background-color: #fff;
+        color: #333;
+    }
+    
+    .top__hello{
+        font-size: 2.5rem;
+    }
+
+    .top__sayaka{
+        font-size: 1.5rem;
+        bottom: 200px;
+    }
+
+    .top__designer{
+        font-size: 3rem;
+        line-height:0.9em;
+    }
+
+    .overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        background-color: #333;
+        text-align: center;
+        padding: 64px;
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity .6s;
+        width: 100vw;
+        height: 100vh;
+        z-index: 30;
+      }
+
+    .sp-menu--close{
+    font-size: 0.8rem;
+    background-color: #333;
+    color: #fff;
+    border-radius: 20px;
+    padding: 0 16px;
+    border: #fff solid 2px;
+    }
+
+
+}
